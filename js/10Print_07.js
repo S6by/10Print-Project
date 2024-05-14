@@ -1,6 +1,6 @@
 let x=0
 let y=0
-let spacing=20
+let spacing=90
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
