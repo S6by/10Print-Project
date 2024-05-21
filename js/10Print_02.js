@@ -1,4 +1,4 @@
-let spacing = 40
+let spacing = 60
 let x = 0;
 let y = 0;
 function setup() {
