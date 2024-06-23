@@ -1,102 +1,35 @@
-=
-let a = 0;
-let b = 35;
-
-let x = 35;
-let y = 0;
-
-let funzioni = [tr1, tr2, tr3, tr4];
+--
+let x=0
+let y=0
+let spacing=90
 
 function setup() {
-    
-    createCanvas(windowWidth, windowHeight);
-    background(0);
-
+  createCanvas(windowWidth,windowHeight);
+  background(255, 255 ,255);
+  //stroke(random(255),random(255),random(255))
+  
 }
 
 function draw() {
-      
-  let funzioneCasuale = random(funzioni);   
-  funzioneCasuale();
-  
-}
-
-function tr1(){
-
-    fill( random(255) , 0, 0);
-    triangle ( a , x , b , x , b , y ); 
-    
-     a = a + 35;  
-     b = b + 35;
-        
-  if (a > windowWidth){
-    
-    a = 0;
-    b = 35; 
-    
-    x = x + 35;
-    y = y + 35;
-    
+  strokeWeight(6);
+  fill(random(255),random(255),random(255))
+  //stroke(100,245,20);
+  if (random(1) < 0.5) {
+    //rect(x,y,spacing,spacing)
+    stroke(random(255),random(255),random(255))
+    //line(x,y,x+spacing,y+spacing);
+    circle(x,y,spacing)
+  } else {
+    stroke(random(255),random(255),random(255))
+    //line(x,y+spacing,x+spacing,y);
+    circle(x,y,spacing-10)
   }
   
-}
-
-function tr2(){
-  
-    fill ( 0, random(255), 0);
-    triangle ( a , y , a , x , b , x ); 
-    
-     a = a + 35;  
-     b = b + 35;
-        
-  if (a > windowWidth){
-    
-    a = 0;
-    b = 35;
-        
-    x = x + 35;
-    y = y + 35;
-    
+  x= x+spacing
+  if (x> windowWidth){
+    x=0;
+    y=y+spacing;
   }
-  
-}
+} 
 
-function tr3(){
-  
 
-    fill ( 0 , 0,  random(255));
-    triangle ( a , y , b , y , a , x ); 
-    
-     a = a + 35;  
-     b = b + 35;
-  
-  if (a > windowWidth){
-    
-    a = 0;
-    b = 35;
-        
-    y = y + 35;
-    x = x + 35;
-    
-  }
-  
-}
-
-function tr4(){
-
-    fill ( random(255) , random(255), random(255));
-    triangle ( a , y , b , y , b , x ); 
-     a = a + 35;  
-     b = b + 35;
-      
-  if (a > windowWidth){
-    
-    a = 0;
-    b = 35;
-        
-    x = x + 35;
-    y = y + 35;
-    
-  }
-  
-}
