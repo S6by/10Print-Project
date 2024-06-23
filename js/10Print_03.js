@@ -1,37 +1,34 @@
-let a = 1000;
+let spacing = 80
+let x = 0;
+let y = 0;
 function setup() {
-  createCanvas(windowWidth,windowHeight);
-  background(0)
+  createCanvas(windowWidth, windowHeight);
+    background(0);
+
 }
 
 function draw() {
-  fill(0)
-  cerchio()
+  stroke(255);
+  strokeWeight(10);
   
-  if(random(1) < 0.5){
+  if ( random (1) < 0.5){
     
-    stroke('white')
     
-    }else {
-      
-      stroke('black')
-      
-      }
+    line( x , y , x , y + spacing );
   
-  
-}
-
-function cerchio(){
-  
-  if (a!=0) {
-  circle(windowWidth/2,windowHeight/2,a)
-  a = a -1;
- 
   }else{
-    
-    }
-    
+  
+   
+    line( x + spacing , y , x , y );
+
+  }
+  
+    x = x + spacing;
+  
+  if (x > windowWidth){
+    x = 0;
+    y = y +spacing;
+  }
 
 }
-  
 
